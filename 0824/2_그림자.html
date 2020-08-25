@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>박스그림자 &amp; 글자그림자</title>
+    <!-- font awesome -->
+    <link href="css/all.min.css" rel="stylesheet">
+    <!-- noto sans kr 폰트 -->
+    <link href="css/notosanskr.css" rel="stylesheet">
+    <style>
+        #box {
+            width: 400px;
+            height: 100px;
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-family: "Noto Sans KR", sans-serif;
+            font-size: 40px;
+            font-weight: 900;
+            /*
+            글자그림자
+            X축 Y축 두께 blur 색상
+            */
+            /*글자 같은색 네온사인같은 느낌*/
+            text-shadow: 0px 0px 30px #fff;
+            /*기본적인 글자 그림자*/
+            /*text-shadow: 2px 2px 2px #424242;*/
+
+            transition: 0.2s ease ;
+
+
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-top: -50px;
+            margin-left: -200px;
+        }
+        /*가상클래스 : hover : 마우스 올렸을때*/
+        #box:hover {box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);}
+
+
+
+    </style>
+
+
+</head>
+<body>
+<div id="box"><i class="fas fa-mug-hot"></i> 캬라멜마끼아또</div>
+</body>
+</html>

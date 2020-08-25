@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션 복습</title>
+    <style>
+        #t1 {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            /*
+            infinite : 무한반복
+            alternate : 정->역->정->역방향(번갈아하는)
+            */
+            animation: move infinite 5s ease;
+        }
+        @keyframes move {
+        0% {left: 0;top: 0}
+        75% {left: 0px;top: 500px}
+        100% {left: 0;top: 0}
+        }
+        #ht{
+            position: fixed;
+            left: 50%;
+            top : 50%;
+            margin-left: -200px;
+            margin-top: -200px;
+            animation: beat infinite 5s linear;
+        }
+        @keyframes beat {
+            0% {transform: scale(1)}
+            25% {transform: scale(0.8)}
+            50% {transform: scale(1.2)}
+            75% {transform: scale(0.9)}
+        }
+
+
+    </style>
+</head>
+<body>
+<img id="t1" src="img/ang.jpg" width="200px" />
+<img id="ht" src="img/heart.png" width="400px" height="400px" />
+</body>
+</html>

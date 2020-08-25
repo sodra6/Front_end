@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션기초</title>
+    <style>
+        #heart{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            /*margin-left: -200px;*/
+            /*margin-top: -200px;*/
+            margin: -200px 0 0 -200px;
+
+        transition: .2s, ease;
+
+        }
+        /*
+           애니매이션을 하려면 @keyframes가 필요함
+       */
+        @keyframes ani1 {
+            0% {transform: rotate(0)}
+            100% {transform: rotate(360deg)}
+        }
+        /*transform 속성
+          값 : rotate(회전,deg), scale(비율), translate, skew*/
+
+        #heart:hover{
+            animation: ani1 1s infinite ease; }
+
+    </style>
+
+</head>
+<body>
+<img id="heart" src="img/heart.png" alt="하트" width="400px">
+</body>
+</html>

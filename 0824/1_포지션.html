@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>포지션</title>
+    <style>
+        body{
+            /*스크롤 생기게 height 길게*/
+            height: 10000px;
+        }
+        #box {
+            width: 600px;
+            height: 400px;
+            background-color: #ffffff;
+            /*브라우저 기준으로 수평수직 가운데*/
+            left: 50%;
+            top: 50%;
+            /*보더 포함한 값*/
+            margin-left: -330px;
+            margin-top: -220px;
+            border: 30px solid #19ce60;
+
+            /*브라우저 기준*/
+            position: fixed;
+        }
+    /*
+             top, right, bottom, left(시계방향) 속성이 있음
+             위의 4가지 속성이 작동되기 위해서는 position값을 static이 아닌 값으로 지정해야함
+             (기본값 : static(멈춰있는, 정적의) 이어서 안움직임)
+             position의 값 : fixed, absolute, relative...
+             - fixed : 브라우저(윈도우) 기준
+             - absolute : 포지셔닝컨텍스트를 기준
+                          (가장 가까운 조상중에 포지션이 absolute, fixed, relative인 요소)
+             - relative :
+
+    */
+        #ang{
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+
+        }
+        #조석{ position: absolute}
+    </style>
+
+
+</head>
+<body>
+    <div id="box">
+        <img id="ang" src="img/ang.jpg" alt="앙" width="150px" height="150px"/>
+        <img id="조석" src="img/zosuk.gif" alt="마음의 소리" width="200px" height="200px"
+    </div>
+
+
+    </div>
+
+</body>
+</html>
