@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Important of web font</title>
+    <!-- 외부 CSS를 가져옵니다.(구글웹폰트)    -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Srisakdi:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Srisakdi:wght@700&display=swap" rel="stylesheet">
+    <style>
+        div{font-size: 40px}
+        #t1{
+            font-family: "Press Start 2P";
+        }
+        #t2{
+            font-family: "Srisakdi";
+        }
+        #t3{
+            font-family: "Sacramento";
+        }
+        h1{
+            /*
+            그냥 폰트이름을 작성하면
+            해당 클라이언트 컴퓨터에 존재할 떄만
+            제대로 그 폰트가 적용됩니다.
+
+            아무리 대표패밀리가 있다고 브라우저마다 OS(운영체제)마다 글자들이 다르게
+            표현되면 안되기 때문에 이미지처럼 폰트를 다운로드 받아서 사용해야 합니다.
+            이러한 폰트를 웹폰트라고 합니다.
+            */
+            font-family: "Rix개봉박두 B", fantasy;
+            font-size: 100px;
+            /*
+            font-family : 폰트설정, 웹폰트가 반드시 필요, 여러개지정가능
+            제일마지막에 대표패밀리를 설정
+            (특정 폰트가 아니라 폰트의 스타일을 설정 : 가장가까운 폰트를 브라우저가 알아서 지정)
+            - sans-serif : 삐침이 없는 폰트(돋움, 굴림, 고딕, ...)
+            - serif : 삐침 있는 폰트
+            - cursive : 필기체
+            - monospace : 타자기체(가독성을 좋게해주는 글씨체, 넓이가 다 똑가틈)
+            - fantisy : 판타지체(우리나라것은 없음)
+            */
+
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+<h1>what a beutiful web service</h1>
+<div id="t1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+<div id="t2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+<div id="t3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+</body>
+</html>

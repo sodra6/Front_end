@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>다양한 색상표현 및 반투명</title>
+    <style>
+        #red{
+        /*
+        css의 색생표현
+        1) 키워드 (red.blue,green....)
+        2) #16진수 3자리 (#000, #fff) -> 빛의 3요소(RGB)
+        3) #16진수 6자리 (#00bfff, ....)
+        4) RGB()함수형
+            - rgb(퍼센트,퍼센트,퍼센트)
+            - rgb(0~255,0~255,0~255)
+        5) RGBA() 함수형 : a는 알파값(투명도)
+            - rgb(퍼센트,퍼센트,퍼센트,0~1)
+            - rgb(0~255,0~255,0~255,0~1 */
+
+            /* 글자 하나당 2byte 글자수를 최소로 줄이는게 현업에서 유리 */
+            color: #ffff; font-size: 80px;font-weight: bold;  background-color: rgba(255,0,0,.5);
+        }
+        /* opacity
+            - 잘 사용하지않음
+            - 요소 전체가 투명해지므로 곂칠떄 사용 지양
+            - 값 0~1
+            */
+        #blue{color: #ffff; font-size: 80px; font-weight: bold;  background-color: rgba(0,0,255,.5);
+            /*추후에 배움*/
+            margin-left: 70px;
+            margin-top: -170px;
+            position: relative;
+        }
+        .box{
+            /* 넓이 */
+            width: 200px;
+            /* 높이 */
+            height: 200px;
+            /* 글자의 수평가운데 정렬 */
+            text-align: center;
+            /* 글자가 한 줄일때 글자 수직 가운데 정렬 하는 방법 : height와 line-height를 같게 */
+            line-height: 200px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <script>
+
+        alert("아룡하세여?");
+
+    </script>
+
+
+    <div id="red" class="box">RED</div>
+    <div id="blue" class="box">BLUE</div>
+</body>
+</html>

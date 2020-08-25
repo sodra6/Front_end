@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>IS &amp; IR 기법</title>
+    <style>
+
+        /* IS(image spripe)기법 : 하나의 이미지에 여러 이미지를 모아놓고 포지션으로 각각 이미지를 표현하는 기법*/
+        /*                  장점 : 서버의 부하를 줄여줌*/
+        /* IR(image replacement)기법 : 글자를 이미지로 대체하는 기법*/
+        /*                  장점 : 글자가 HTML에 존재하면 웹접근성, 검색엔진최적화(SEO)가 좋음,*/
+        /*                         하지만 글자보다 이미지가 더 이뻐서  글자를 이미지로 대체하여 꾸미는 기법*/
+        #logo {
+            /*넓이*/
+            width: 450px;
+            /*높이*/
+            height: 100px;
+            /*뒷배경색*/
+            background-color: white;
+            /*뒷배경 그림*/
+            background-image: url("img/sp_main_b46ce0.png");
+            /*뒷배경 반복*/
+            background-repeat: no-repeat;
+            /*뒷배경 포지션*/
+            background-position: 0 -320px;
+        }
+        #creator {
+            width: 196px;
+            height: 75px;
+            /*background-color: blue;*/
+            background-image: url("img/sp_main_b46ce0.png");
+            background-position: -550px -332px;
+
+        }
+        #dark {
+            /*넓이*/
+            width: 265px;
+            /*높이*/
+            height: 100px;
+            /*background-color: yellow;*/
+            /*뒷배경사진*/
+            background-image: url("img/sp_main_b46ce0.png");
+            /*뒷배경 반복*/
+            background-repeat: no-repeat;
+            /*뒷배경 위치*/
+            background-position: -546px -220px;
+        }
+        .ir_wa {
+            /* IR 기법_글자 들여쓰기*/
+            text-indent: -9999px;
+            /*부모요소에서 벗어난 자식을 숨기기*/
+            overflow: hidden;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+<h1 id="logo" class="ir_wa"><a href="https://www.naver.com"><label>네이버</label></a></h1>
+    <div id="creator" class="ir_wa">추천 크리에이터</div>
+    <div id="dark" class="ir_wa">다크모드로 보기</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>다양한 Background속성</title>
+<style>
+/* background 관련 속성
+    - background-image : 뒷배경 이미지
+    - background-color : 뒷배경색
+    - background-repeat : 이미지 반복
+    - background-size : 이미지 크기지정(픽셀, 퍼센트, cover, contain)
+    - background-position : 뒷배경이미지 포지션 지정
+
+*/
+ #box{
+     /*넓이*/
+     width: 512px;
+     /*높이*/
+     height: 384px;
+     /*뒷배경색*/
+     background-color: silver;
+    /*뒷배경 이미지 */
+     background-image: url(img/roma.jpg);
+    /*뒷배경 이미지 반복에대한 속성 */
+     background-repeat: no-repeat;
+    /*뒷배경 이미지 크기지정*/
+     background-size: 100% 100%;
+    /*css에서 만약 숫자 2개를 쓴다면 앞은 수평(x축) 뒤는 수직(y축)*/
+
+ }
+</style>
+
+
+
+
+
+</head>
+<body>
+<div id="box"><a href="img/roma.jpg" target="_blank"></a> </div>
+</body>
+</html>
