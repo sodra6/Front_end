@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>tramsform-origin</title>
+    <style>
+        body{
+            background-color: #0f4c82;
+            text-align: center;
+        }
+        img{
+            cursor: pointer;
+        }
+        #frame{
+            /*기본값을 꼭 설정*/
+            transform: rotateZ(0);
+            transition: 0.4s ease;
+            transform-origin: 50% 0%;
+        }
+
+        #frame:active{
+            transform: rotateZ(-30deg);
+            /*
+            transform-origin속성
+            transform이 작동되는 시작점(기원)을
+            정하는 속성 : 기본값은 50% 50%
+            */
+            transition: 0.4s ease;
+        }
+        #car:active{
+            transition: 0.3s ease;
+            transform:perspective(200px) rotateX(70deg);
+        }
+        #car{
+            /*  기본값을 꼭 설정  */
+            transform:perspective(200px) rotateX(0);
+            transition: 0.3s ease;
+            transform-origin: 50% 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <img id="frame" src="img/frame.png"/>
+<hr/>
+    <img id="car" src="img/dbs.jpg" width="400"/>
+</body>
+</html>

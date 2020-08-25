@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 애니메이션1</title>
+    <style>
+        #dice{
+            width: 190px;
+            height: 190px;
+            background-image: url("img/dice.png");
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -95px 0 0 -95px;
+            animation: 1s ani infinite steps(6);
+        }
+        @keyframes ani {
+            0% {background-position: 0 0}
+            100%{background-position: -1140px 0}
+        }
+        #loader{
+            background-image: url("img/preload-tindercox.png");
+            width: 472px;
+            height: 472px;
+            animation: ani1 3s infinite steps(60);
+        }
+        @keyframes ani1 {
+            0% {background-position: 0 0}
+            100% {background-position: 28320px 0}
+        }
+
+    </style>
+</head>
+<body>
+<div id="dice"></div>
+<div id="loader"></div>
+
+</body>
+</html>

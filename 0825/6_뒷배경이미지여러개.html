@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>뒷배경이미지 여러개</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #box{
+            width: 800px;
+            height: 800px;
+            background-color: #0f4c82;
+            /* 앞에 쓰면 위 */
+            background-image: url("img/ang.gif"), url("img/cob.gif"), url("img/scappy.gif");
+
+            background-repeat: no-repeat;
+            background-size: 200px 50px, 200px 100px, 100px 100px;
+            background-position: 600px 600px, 600px 400px,600px 200px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

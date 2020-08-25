@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가상요소 활용</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/notosanskr.css">
+    <style>
+    body{
+        font-family: "Noto Sans KR", sans-serif;
+    }
+    .msg{
+        font-weight: 100;
+        font-size: 13px;
+        background-color:#def3e7 ;
+        width: 120px;
+        border-radius: 20px 0 20px 20px ;
+        /*포지셔닝컨텍스트 지정*/
+        position: relative;
+        /*
+         width, height공간을 콘텐츠
+         코넨츠와 border사이의 간격을 paddiing
+        */
+        padding: 10px;
+    }
+    /*  가상 요소 선택자의 사용이유
+        - 요소가 필요한데 꾸미는 용도일때
+        (HTML안에 삽입할 경우 쓸데없는 요소가 들어감)
+    */
+    .msg::after{
+        content: "";
+        position: absolute;
+        border-top: 15px solid #def3e7;
+        border-right: 15px solid transparent;
+        right: -15px;
+        top: 0;
+    }
+
+        #t1{
+            font-size: 13px;
+            font-weight: 100;
+            margin: 5px 0 0 0;
+            width: 110px;
+            background-color: #def3e7;
+            border-radius: 60px 60px 60px 60px;
+            padding: 10px;
+            position: relative;
+        }
+
+        #t1::after{
+            content: "";
+            position: absolute;
+            border-top: 15px solid #def3e7;
+            border-right: 15px solid #def3e7;
+            top: 58px;
+            left: 50px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="msg">선생님 제가 20분정도 늦을거 같아요,,,</div>
+    <div id="t1" >선생님 제가 20분정도 늦을거 같아요,,,</div>
+
+</body>
+</html>

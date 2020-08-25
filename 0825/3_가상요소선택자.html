@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가상요소선택자</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 300px;
+            background-color: silver;
+            text-align: center;
+            line-height: 300px;
+        }
+    /* 가상 요소 선택자
+        요소가 하나 만들어짐(CSS에서 요소붙임)
+        - befor : 첫번째 자식
+        - after : 마지막 자식
+        - 무조건 content속성을 써야함
+     */
+        #box::before{
+            content: "A";
+        }
+        #box::after{
+            content: "B";
+        }
+    /*
+    가상클래스 선택자(:)
+        - hover : 마우스 오버시
+        - active: 마우스 클릭시
+        - focus: 포커스가 맞을때
+        - visited : 다녀온 링크일때
+    */
+        #box:hover{
+            background-color: silver;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: 0.1s ease;
+        }
+        #box:active{
+            transform: scale(1.2);
+            transition: 0.2s ease;
+            user-select: none;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="box">가나다라마</div>
+</body>
+</html>

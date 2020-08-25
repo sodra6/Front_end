@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>BMJ | 밴드</title>
+    <link rel="icon" href="icon/favicon.ico">
+    <link rel="stylesheet" href="img/">
+    <style>
+        body{
+            /*브라우저가 가진 CSS*/
+            margin: 0;
+            background-image: url("img/band_bg.jpg");
+            height: 4274px;
+            /*background-size: 100%;*/
+            background-position: center 0 ;
+        }
+        #lyWrap{
+            /*브라우저 기준*/
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .75);
+            /*background-image: url("img/popup.png");*/
+
+        }
+        #popup{
+            position: absolute;
+            width: 600px;
+            height: 483px;
+            /*포지셔닝컨텍스트를 기준
+            (포지셔닝컨텍스트는 가장 가까운
+            조상중에 position이 relative, absolute, fixed인 요소)*/
+            background-image: url("img/popup.png");
+            left: 50%;
+            top: 50%;
+            margin: -241.5px 0 0 -300px;
+        }
+        #clseBtn {
+            background-image: url("img/spr_icons.png");
+            width: 15px;
+            height: 15px;
+            background-position: -98px -568px;
+            text-indent: -9999px;
+            overflow: hidden;
+            position: absolute;
+            right: 20px;
+            top: 21px;
+            /*브라우저가 가진 CSS*/
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="lyWrap">
+        <div id="popup">
+            <div id="clseBtn">닫기</div><!--//clsBtn -->
+        </div> <!--//popup -->
+    </div> <!--//lyWrap -->
+</body>
+</html>
