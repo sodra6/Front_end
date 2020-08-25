@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>영화 박스오피스</title>
+	</head>
+	<link rel="icon" href="img/daum_movie.ico">
+	<link rel="stylesheet" href="css/all.min.css">
+	<body>
+<h1><i class="fas fa-film"></i> 아주 멋진 영화 사이트</h1>
+	<h2><i class="fas fa-search"></i> 영화검색</h2>
+<!-- 영화 검색 폼 -->
+<form action="http://www.kobis.or.kr/kobis/business/mast/mvie/searchMovieList.do" method="post" role="search">
+	<fieldset>
+		<legend>영화 검색폼</legend>
+		검색<input type="text" name="sMovName" />
+			<button type="submit"><i class="fas fa-search"></i> 검색</button>
+	</fieldset>
+</form>
+<hr />
+<!--테이블 영화순위 표-->
+<h2><i class="fas fa-clipboard-list"></i> 일일 박스오피스</h2>
+	<table border="1">
+<!--	해드테이블		-->
+		<thead>
+		<tr>
+		<th>순위</th>
+		<th>포스터</th>
+		<th>영화명</th>
+		<th>관객수</th>
+		</tr>
+<!--	바디 테이블	-->
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td><img src="poster/poster2.jpg" alt="다만악에서 구하소서 영화 포스터" height="100px"></td>
+			<td>다만악에서 구하소서</td>
+			<td>4,105,618</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><img src="poster/poster1.jpg" alt="테넷 영화 포스터" height="100px"></td>
+			<td>테넷</td>
+			<td>84,617</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><img src="poster/poster3.jpg" alt="오케이마담 영화 포스터" height="100px"></td>
+			<td>오케이마담</td>
+			<td>1,135,333</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td><img src="poster/poster6.jpg" alt="짱구는 못말려 영화 포스터" height="100px"></td>
+			<td>극장판 짱구는못말려:신혼여행 허리케인~ 사라진 아빠!</td>
+			<td>62,662</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td><img src="poster/poster5.jpg" alt="강철비2 영화 포스터" height="100px"></td>
+			<td>강철비2: 정상회담</td>
+			<td>1,772,991</td>
+		</tr>
+	</tbody>
+<!--	풋테이블	-->
+	<tfoot>
+	<tr>
+		<td colspan="4"><a href="http://www.kobis.or.kr/kobis/business/main/main.do">영화진흥위원회 영화관 입정권 통합전산망 제공</a></td>
+	</tr>
+	</tfoot>
+	</table>
+	</body>
+</html>

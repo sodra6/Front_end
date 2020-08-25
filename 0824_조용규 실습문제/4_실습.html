@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Model S | Tesla</title>
+    <link rel="icon" href="img/tesla_favicon.ico">
+    <style>
+        /* 겉 보더 설정 및 포지션 설정*/
+        #carBox{
+            border: 1px solid #000000;
+            width: 1000px;
+            height: 400px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -500px;
+            margin-top: -200px;
+            text-align: center;
+        }
+
+        /*앞바퀴 상세설정*/
+        .front {
+            position: absolute;
+            left: 195px;
+            top: 125px;
+        }
+        /*뒷바퀴 상세설정*/
+        .rear{
+            position: absolute;
+            left: 645px;
+            top: 125px;
+        }
+        /*바퀴 전체설정*/
+        .wheel{
+            width: 105px;
+            transition: 0.2s linear;
+            animation: wheel infinite .1ms linear;
+        }
+        /*바퀴 굴러가는 애니메이션 설정*/
+        @keyframes wheel {
+            0% {transform: rotate(0)}
+            100% {transform: rotate(360deg)}
+        }
+
+        /*차 프레임 위치 및 애니메이션 설정*/
+        #car{
+            position: absolute;
+            animation: bd infinite 2s ease;
+        }
+        /*차 프레임 애니메이션 상세설정*/
+        @keyframes bd {
+            0%{left: 0; top: 82px}
+            25%{left: 0;top: 86px}
+            50%{left: 0;top: 89px}
+            75%{left: 0;top: 87px}
+            90%{left: 0;top: 84px}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="carBox">
+        <h1>테슬라 S</h1>
+        <div id="car">
+            <img id="bd" src="img/car_body.png" width="1000px" height="235px"/>
+            <img class="wheel rear" src="img/wheel21.png" />
+            <img class="wheel front" src="img/wheel21.png" />
+        </div>
+    </div>
+	
+</body>
+</html>
