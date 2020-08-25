@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가상클래스선택자</title>
+    <style>
+        input{
+            border: 10px solid greenyellow;
+            /*border-style: solid;*/
+            /*border-color: greenyellow;*/
+            /*border-width: 10px ;*/
+            border-radius: 15px;
+        }
+
+        input:focus{
+            border-color: green;
+        /*css의 속성값 변화를 부드럽게 처리*/
+            transition: .2s ease;
+        }
+        /*
+            가상클래스 선택자 : ':'
+            - focus
+            - active
+            - hober
+
+        */
+    </style>
+
+ </head>
+<body>
+<input />
+</body>
+</html>

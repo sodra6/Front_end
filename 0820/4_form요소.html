@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼요소와 파라미터</title>
+</head>
+<body>
+<h1>폼요소</h1>
+
+<form method="post" action="/login.do">
+<fieldset>
+    <legend>로그인</legend>
+    <div>
+        <label>아이디 <input name="id" id="id" /></label>
+    </div>
+    <div>
+        <label for="pw">패스워드 </label><input name="pw" type="password" id="pw" /><button>로그인</button>
+    </div>
+    <div>
+        <input type="checkbox" id="chk" /><label for="chk">로그인 상태 유지</label>
+
+    </div>
+</fieldset>
+
+</form>
+
+<hr />
+
+
+<h2>다음에서 검색?</h2>
+<a href="https://search.daum.net/search?q=조용규">검색!</a>
+<!--
+
+    form 요소
+    - 유저가 입력한 데이터를 파라미터로 서버에 넘기기 위해서 필요한 요소
+    - GET뿐만 아니라 POST방식으로도 넘길 수 있음
+    - method 속성 : GET(기본값) / POST
+    - action 속성 : 파라미터를 넘길 주소
+
+    fieldset 요소
+    - input 요소들을 묶어주는 요소
+    - form과 함께 많이 사용(반드시는 아님), legend 요소는 범례(fieldset의 제목)
+
+    input 요소
+    - 유저가 입력하는 요소
+    - 한 문장 입력(여러문장 입력은 textarea 요소)
+    - type : text, password, checkbox, radio....(HTML5에서는 더 다양해짐)
+
+    label 요소
+    - input 요소의 제목
+    - input 요소의 id속성과 label 요소의 for속성으로 연결
+
+    button 요소
+    - 버튼
+
+    웹은 HTTP 프로토콜이고
+    HTTP 프로토콜 : 요청&응답 프로토콜
+    WS 프로토콜 :
+
+    파라미터(parameter)
+    - 클라이언트에서 서버로 보내는 데이터
+    - 이름과 값으로 구성(name / value)
+    - input, select, textarea요소에 반드시 name 속성이 필요!!
+
+    파라미터가 넘어가는 방식 : GET / POST
+                              (PUT / DELETE)
+
+     GET 방식
+     - 주소창에 파라미터가 노출되는 방식
+     - 주소에 쿼리스트링으로 파라미터가 넘어감
+     - 주소?이름=값&이름=값%이름=값....
+     - 쿼리스트링이라고한다. (스트링=문자열)
+     - 장점 : crtl + c // crtl + v
+              주소에 파라미터가 존재하기 때문에 링크를 클릭한 사람도 같은 웹을 볼수 있다.
+     - 단점 : 파라미터의 크기가 작음(3~4 MB)
+              주소창에 노출되기 떄문에 보안의 문제발생
+
+     POST 방식
+     - 파라미터가 주소창에 노출되지 않음
+     - 요청프로토콜의 body에 숨겨져 있음
+     - 장점 : 보안 및 크기의 제한이 없음
+     - 단점 : crtl + c // crtl + v 가 안됨
+
+
+    쿼리(query)
+    - 질의어
+
+    프로토콜
+    - 클라이언트와 서버간의 통신규약
+
+    정보(data or information)
+ -->
+<button type=""
+</body>
+</html>

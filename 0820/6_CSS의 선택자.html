@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS의 선택자</title>
+    <style>
+        /*
+            CSS의선택자(selector)
+            - 요소선택자 : 요소명
+            - ID 선택자 : #id속성값
+            - class 선택자 : .class값
+
+
+            HTML요소의 id속성의 특징은 한페이지에 단 한개의 명이 존재해야 함(ID의 속성값이 중복되면 X)
+            HTML요소의 class속성의 특징은 한페이지에 중복도 되고 한 요소에 여러개 중첩이 가능.
+        */
+        #test1 {
+            color: red;
+        }
+        #test2 {
+            color: blue;
+        }
+        #test3 {
+            color: greenyellow;
+        }
+        .box {
+            /*넓이*/
+            width: 200px;
+            /*높이*/
+            height: 200px;
+            /*뒷 배경색깔*/
+            background-color: antiquewhite;
+            /*글자 정렬*/
+            text-align: center;
+            /*문장이 한줄일때 가운데줄 정렬*/
+            line-height: 200px;
+        }
+        /*둥근 보더*/
+        .circle {
+            border-color: black;
+            border-radius: 100px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1 id="test1" class="box circle">나는 H1</h1>
+<h1 id="test2" class="box">나도 H1</h1>
+<h1 id="test3" class="box">나역시 H1</h1>
+</body>
+</html>
