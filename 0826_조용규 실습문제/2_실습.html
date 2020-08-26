@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<title>파도치는섬</title>
+		<style>
+			body{
+				width: 1904px;
+				height: 974px;
+				position: fixed;
+				background-image: url("img/model_bg.png"), url("img/ombra_bg.png");
+				left: 50%;
+				top: 50%;
+				margin-left: -952px;
+				margin-top: -487px;
+			}
+			#island{
+				width: 1190px;
+				height: 520px;
+				position: absolute;
+				background-image: url("img/home_mondoall.png");
+				left: 50%;
+				top: 50%;
+				margin-top: -260px;
+				margin-left: -595px;
+			}
+			#wave{
+				width: 988px;
+				height: 99px;
+				position: absolute;
+				background-image: url("img/mare_verticale.png");
+				left: 50%;
+				top: 50%;
+				margin-top: 60px;
+				margin-left: -575px;
+				animation:ani .5s infinite steps(17);
+				transition: .2s linear;
+			}
+			@keyframes ani {
+				0% {background-position: 988px 0}
+				100% {background-position: 988px 1683px}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="island">
+			<div id="wave"></div>
+		</div>
+	</body>
+</html>
