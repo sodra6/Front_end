@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>firefox</title>
+    <style>
+        #phone{
+            width: 327px;
+            height: 586px;
+            /*background-color: red;*/
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -163.5px;
+            margin-top: -293px;
+            background-image:url("img/phone-shadow.png"),
+                              url("img/phone-overlay.png"),
+                              url("img/screen-overview.jpg");
+            background-repeat: no-repeat;
+            background-position: 0 490px, 0 0, 40px 80px;
+            background-size: 327px 100px,327px 586px, 250px 375px;
+        }
+        #fox{
+            background-image: url("img/foxtail.png");
+            position: absolute;
+            /*background-color: white;*/
+            width: 156px;
+            height: 156px;
+            animation: ani 1s infinite steps(45);
+            top: 50%;
+            left: 50%;
+            margin-left: -90px;
+            margin-top: -130px;
+        }
+        @keyframes ani {
+            0% {background-position: 0 0}
+            100% {background-position: 7020px 0}
+        }
+    </style>
+</head>
+<body>
+    <div id="phone">
+        <div id="fox"></div>
+    </div>
+</body>
+</html>

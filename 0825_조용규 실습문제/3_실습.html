@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+   
+</head>
+<style>
+    #box{
+        width: 800px;
+        position: fixed;
+        /*background-color: black;*/
+        left: 50%;
+        top: 50%;
+        margin-left: -400px;
+        margin-top: -400px;
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+    h1{
+        width: 600px;
+        height: 80px;
+        position: absolute;
+        background-color: green;
+        color: white;
+        text-indent: 20px;
+        line-height: 80px;
+        margin-left: -30px;
+        margin-top: 50px;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    h1::after{
+        content: "";
+        position: absolute;
+        border-top: 30px solid darkgreen;
+        border-left: 30px solid transparent;
+        top: 80px;
+        left: 0px;
+    }
+    img{
+        border: 10px solid green;
+    }
+    #triangle::after{
+        content: "";
+        position: fixed;
+        /*border-top: 50px solid orange;*/
+        border-right: 50px solid transparent;
+        border-bottom: 50px solid orange;
+        border-left: 50px solid transparent;
+    }
+</style>
+<body>
+    <div id="triangle"></div>
+	
+	<!-- 자신이 좋아하는 인물이나 물건등으로 해보세요. -->
+    <div id="box">
+        <h1>DBS Superleggera 007 Edition</h1>
+        <img src="img/dbs.jpg" width="800"/>
+    </div><!--//box-->
+	
+</body>
+</html>
