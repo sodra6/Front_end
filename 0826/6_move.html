@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>move</title>
+<style>
+    #scappy{
+        /*translate: 운반하다*/
+        transform: translate(0,0);
+        transition: .5s linear;
+    }
+
+</style>
+</head>
+<body>
+<div>
+<button id="leftBtn">왼쪽</button>
+<button id="rightBtn">오른쪽</button>
+</div>
+<img id="scappy" src="img/scappy.gif" width="100" />
+<script src="js/jquery.js"></script>
+<script>
+    //전역변수 left를 선언하고 0으로 초기화(대입)
+    var x = 0;
+    $('#rightBtn').click(function () {
+        x += 100;
+        $("#scappy").css("transform","translate("+x+"px,0)");
+    })//leftBTN end
+    //#scappy요소를 선택한 후 css의 transform 속성의 값을 translated(x의 값으로, 0)으로 설정
+    $('#leftBtn').click(function () {
+        x -= 100;
+        $("#scappy").css("transform","translate("+x+"px,0)");
+    })//rightBTN end
+</script>
+</body>
+</html>

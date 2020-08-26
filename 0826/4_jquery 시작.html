@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery 시작</title>
+</head>
+<body>
+<h1>안녕?</h1>
+<button>눌러봐!</button>
+<!--jquery import -->
+<script src="js/jquery.js"></script>
+<!--&lt;!&ndash;우리가 작성하는 코드-->
+
+<script>
+    /*
+     jquery는 $만 기억하세요.
+     $(선택자) <- 요소가 선택됨
+     jquery의 메서드
+     1) css() : css관련
+     2) text() : 글자관련
+     */
+
+    //유저가 버튼을 클릭했을때
+    $('button').click(function () {
+
+    // h1요소를 선택하고 글자색을 변경하고 글자를 변경
+    $("h1").css('color','red').
+    $("h1").text('Bye!');
+
+    // alert('dfdfdf')
+    })//click() end
+
+
+</script>
+</body>
+</html>

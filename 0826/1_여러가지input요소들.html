@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>여러가지 input 요소들</title>
+</head>
+<body>
+<h1>회원가입</h1>
+<form action="/join.do" method="get">
+    <fieldset>
+        <legend>회원가입폼</legend>
+        <div>
+            <h2>아이디입력</h2>
+            <label for="id">아이디</label>
+            <input name="id" id="id" placeholder="아이디"/>
+                <div>
+                    <h2>생년월일</h2>
+                    <!--
+                    select요소 : 여러가지 옵션중에
+                    반드시 하나를 선택하는 요소
+                    - 자식이 option요소
+                    - name속성은 select요소
+                    - value속성은 option에
+                    (안쓰면 글자가 value값이 됨)
+                    -->
+                    <select name="year">
+                        <option>2020</option>
+                        <option>2019</option>
+                        <option>2018</option>
+                        <option>2017</option>
+                        <option>2016</option>
+                        <option>2015</option>
+                    </select>년
+                </div>
+            <div>
+                <button>회원가입</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+</body>
+</html>
