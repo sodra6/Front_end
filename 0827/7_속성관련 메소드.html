@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>html 속성관련 메소드</title>
+</head>
+<body>
+<p>
+    <button id="btn1">이미지 변경</button>
+    <button id="btn2">alt 얻기</button>
+    <button id="btn3">여러속성 한번에 변경</button>
+</p>
+<img src="img/ruizy.png"
+     alt="루이지"
+     height="431"
+     width="315" />
+<script src="js/jquery.js"></script>
+<script>
+    $('#btn1').click(function () {
+        $('img').attr('src','img/mario.jpg');
+        /*
+            HTML 속성관련 메소드명 : attr
+            1) attr(속성명,속성값)
+            2) attr(속성명)
+            3) attr(객체)
+         */
+    });
+    $('#btn2').click(function () {
+        const alt = $('img').attr('alt');
+        alert(alt);
+    })
+    $('#btn3').click(function () {
+        $('img').attr({
+            height:292,
+            width:173,
+            src:"img/mushroom.jpg",
+            alt:"버섯돌이"
+        });//#img attr() end
+    });//btn.click() end
+</script>
+
+
+</body>
+</html>

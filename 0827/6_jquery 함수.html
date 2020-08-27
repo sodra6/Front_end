@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery 함수</title>
+</head>
+<body>
+<h1>asdf</h1>
+<!--jquery.js 파일을 import-->
+<script src="js/jquery.js"></script>
+<script>
+    /*
+    jQuery() -> $()
+    jQuery함수를 호출했을때 리턴되는 결과가 객체
+    jQuery객체(순수자바스크립트객체와는 다름)
+     */
+
+    /*
+    $h1 변수를 선언하고,
+    jquery함수를 호출하여 jquery객체를 얻어와서 변서 $h1에 대입
+    */
+   var $h1 = $('h1');
+
+   $h1.css('color', 'red');
+
+</script>
+</body>
+</html>

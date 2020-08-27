@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript 객체</title>
+    <style>
+        h1{
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+<h1 id="test">HI</h1>
+    <script>
+
+        var hwang = {
+            name:"황정민",
+            height:180,
+            weight:75,
+            test:function (){
+                //객체안에 함수를 메소드라고 한다.
+                alert("이게 메소드!!")
+            }//test end
+        };//hwang end
+        //이름속성값을 이정재로 변경
+        hwang.name = "이정재";
+        //몸무게를 71로 변경
+        hwang.weight="71"
+        //hwang 객체가 가진 test() 메소드를 호출
+        hwang.test();
+        alert(hwang.weight);
+        //개발자도구의 콘솔에 출력
+        console.log(hwang.weight)
+        /*
+        자바스크립트 객체 : 속성들의 묶음
+        java는 클래스 기반의 객체지향
+        javascript는 클래스 없이 객체를 만들 수 있다.
+        객체 생성
+         - {}이것이 객체
+         - new Object();
+        속성명은 자료형이 무조건 문자열형 : 그래서 '',"" 생략가능
+        객체의 속성접근법 : .
+        */
+    </script>
+</body>
+</html>
