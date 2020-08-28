@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Date 객체</title>
+</head>
+<body>
+<h1>???</h1>
+<script src="js/jquery.js"></script>
+<script>
+
+
+    //Date객체 생성
+    function displayTime() {
+        const now = new Date();
+
+        //년도 얻기
+        const year = now.getFullYear();
+        //월 얻기
+        const month = now.getMonth()+1;
+        //일 얻기
+        const date = now.getDate();
+        //시간 얻기
+        const hour = now.getHours();
+        //분 얻기
+        const  min = now.getMinutes();
+        //초 얻기
+        const sec = now.getSeconds();
+        //다 합침
+        const fulltime = year+'년' +month+'월'  +date+'일' +hour+'시간' +min+'분' +sec+'초';
+
+        $('h1').text(fulltime)
+        setInterval(displayTime,1000)
+    }
+
+    displayTime();
+
+
+
+
+
+
+</script>
+</body>
+</html>

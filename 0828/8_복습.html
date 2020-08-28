@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>?</h1>
+<button id="startBtn" >START</button>
+<button id="stopBtn" >STOP</button>
+<button id="resetBtn" disabled="disabled">RESET</button>
+<script src="js/jquery.js"></script>
+<script>
+let t = 0;
+let time = 0;
+    $('#startBtn').click(function () {
+
+        $('#startBtn').attr("disabled",true)
+        $('#resetBtn').attr("disabled",true)
+        time = setInterval(function () {
+            $('h1').text(++t);
+        },1)
+    });
+    $('#stopBtn').click(function () {
+        clearInterval(time);
+        //비활성화
+        $('#startBtn').attr("disabled",false)
+        $('#resetBtn').attr("disabled",false)
+    });
+    $('#resetBtn').click(function () {
+        $('h1').text(0);
+        t=0;
+        $(this).attr('disabled',true)
+        //비활성화
+        $('#startBtn').attr("disabled",false)
+        $('#stopBtn').attr("disabled",false)
+    });
+
+</script>
+</body>
+</html>

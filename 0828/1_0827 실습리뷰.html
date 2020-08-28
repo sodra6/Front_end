@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>review</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            border: 1px solid red;
+            margin: 0;
+            background-color: blue;
+            cursor: crosshair;
+        }
+        #circle{
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0 255 0);
+            color: white;
+            border-radius: 50%;
+            font-size: 50px;
+            line-height: 100px;
+            text-align: center;
+            box-shadow: 10px 10px 25px  #424242;
+            text-shadow: 3px 3px 10px #424242;
+            transition: .1s ease;
+            user-select: none;
+            font-family: Arial,sans-serif;
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="circle">1</div>
+
+<script src="js/jquery.js"></script>
+<script>
+
+
+    function getRandomColor() {
+        const r= Math.floor(Math.random()*256);
+        const g= Math.floor(Math.random()*256);
+        const b= Math.floor(Math.random()*256);
+        return "rgb("+r+","+g+","+b+")";
+    }
+
+    let num = 1
+    $('html').click(function (evt) {
+        /*
+            이벤트가 발생했을때의 여러가지 데이터 묶음이 바로 이벤트 객체
+            마우스이벤트의경우 좌표가 있음
+            여러가지 좌표들
+            -screenX, screenY : 모니터의 좌표
+            -clientX, clientY : 브라우저의 좌표
+            -pageX, pageY : 페이지에서의 좌표
+         */
+        const x= evt.clientX;
+        const y= evt.clientY;
+        console.log("x:"+x+"/y"+y);
+        const size= Math.floor(Math.random()*101)+50;
+        /*
+        중복된 코드가 있으면 함수로 빼라
+        랜덤한 색상을 리턴하는 함수 getRandomColor
+         */
+
+
+    $('#circle')
+        .css({
+                left:x-size/2,
+                top:y-size/2,
+                backgroundColor:getRandomColor,
+                fontSize:size/3*2,
+                width:size,
+                height:size,
+                lineHeight:""+size+"px"
+        }).text(++num);//#circle.css() end
+
+    $('body').css('backgroundColor',getRandomColor);
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+    <button>변경</button>
+</p>
+<img src="img/footer_face01.gif" alt="무지" />
+<script src="js/jquery.js"></script>
+<script>
+
+    $('button').click(function () {
+        const n = $(this).index()+1
+        $('img').attr('src',"img/footer_face0"+n+".gif")
+    })//button click() end
+
+</script>
+</body>
+</html>

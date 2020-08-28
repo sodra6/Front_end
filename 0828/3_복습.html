@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습</title>
+    <style>
+    button{
+            cursor: pointer;
+            padding: 12px 18px;
+            border: none;
+        }
+    button:nth-child(1){
+        background-color: deeppink;
+    }
+    button:nth-child(2){
+        background-color: deepskyblue;
+    }
+    button:nth-child(3){
+        background-color: lime;
+    }
+    #box{
+        width: 300px; height: 200px;
+        border: 1px solid #424242;
+    }
+
+    </style>
+</head>
+<body>
+<p>
+    <button>deeppink</button>
+    <button>deepblue</button>
+    <button>lime</button>
+
+</p>
+<div id="box"></div>
+<script src="js/jquery.js"></script>
+<script>
+    $("button").click(function () {
+      $("#box").css({
+          backgroundColor:$(this).css('background-color')
+      })//#box.css() end
+    })//btn.click() end
+
+</script>
+</body>
+</html>

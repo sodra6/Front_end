@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>버트1</button>
+<button>버트2</button>
+<button>버트3</button>
+<button>버트4</button>
+
+<script src="js/jquery.js"></script>
+<script>
+    $('button').click(function () {
+        const n = $('button').index()
+        alert(''+n+'번 버튼');
+        //this라는 키워드 : 그 요소 자기자신
+        //this는 순수 자바스크립트요소 객체
+        //jquery객체가 아님, 순수자바스크립트 객체를 => jquery 객체로 변경
+        //console.log(this);
+        //console.log($(this));
+        //$(this).css("color","red")
+    })
+//text(), css(), attr(), click()
+/*
+ index() : 부모로부터 몇번째 자식인지 index숫자값을 얻어오는 getter
+ 인덱스는 0부터
+ */
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

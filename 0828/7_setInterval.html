@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="t1">0</div>
+<div id="t2">0</div>
+<button id="stopBtn">STOP</button>
+<script src="js/jquery.js"></script>
+<script>
+
+    let num1 = 0;
+    let num2 = 0;
+      const id1 = setInterval(function () {
+        $('#t1').text(++num1);
+    },1000);
+      const id2 = setInterval(function () {
+        $('#t2').text(++num2);
+    },3000);
+        $('#stopBtn').click(function () {
+            clearInterval(id1);//첫번째 인터벌을 멈춤
+            clearInterval(id2);
+        }); //#stopBtn.click() end
+</script>
+</body>
+</html>

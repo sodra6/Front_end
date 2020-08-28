@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>뽁습</title>
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <style>
+        #box{
+            position: fixed;
+            width: 700px;
+            height: 700px;
+            left: 50%;
+            top: 50%;
+            margin-left: -350px;
+            margin-top: -350px;
+            text-align: center;
+            box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+        }
+        #clock{
+            position: absolute;
+            background-image: url("img/Clock-face.png");
+            background-size: 100%;
+            width: 500px;
+            height: 500px;
+            left: 100px;
+            top: 100px;
+            border: 10px solid #424242;
+            border-radius: 50%;
+            background-color: plum;
+        }
+        #hour{
+            position: absolute;
+            background-image: url("img/hour_hand.png");
+            width: 500px;
+            height: 500px;
+            background-repeat: no-repeat;
+        }
+        #min{
+            position: absolute;
+            background-image: url("img/minute_hand.png");
+            width: 500px;
+            height: 500px;
+            background-repeat: no-repeat;
+        }
+        #sec{
+            position: absolute;
+            background-image: url("img/second_hand.png");
+            width: 500px;
+            height: 500px;
+            background-repeat: no-repeat;
+            transform: rotate(0);
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <h1><i class="far fa-clock"></i> 시계</h1>
+    <div id="clock">
+        <div id="hour"></div>
+        <div id="min"></div>
+        <div id="sec"></div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    function displayclock() {
+
+        const now = new Date();
+        //시간 얻기
+        const hour = now.getHours();
+        //분 얻기
+        const  min = now.getMinutes();
+        //초 얻기
+        const sec = now.getSeconds();
+        $('#sec').css("transform", "rotate("+sec*6+"deg)");
+        $('#min').css("transform", "rotate("+min*6+"deg)");
+        $('#hour').css("transform", "rotate("+hour*30+"deg)");
+    }
+
+        setInterval(displayclock,1000)
+
+</script>
+</body>
+</html>

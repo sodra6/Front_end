@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>박스모델</title>
+    <style>
+
+        body{margin: 0;border: 1px solid red}
+        #box{
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            padding: 50px;
+            border: 50px solid #424242;
+            background-color: red;
+            background-clip: content-box;
+
+
+
+        /*
+            박스모델
+            - width, height, border, margin, padding 합쳐서 계산
+            - 기본값 or 음수값(?_
+            - auto 값
+            - width, height 기본값은 auto
+            - widht값이 auto면 부모의 width
+            - height값이 auto면 자식의 height
+            - 뒷배경색은 border까지 지정됨
+
+            박스모델의 너비, 높이?
+            (margin, border, padding 값까지 계산한 값)
+        */
+
+        }
+    </style>
+</head>
+<body>
+<div id="box">아룡하세요</div>
+</body>
+</html>
