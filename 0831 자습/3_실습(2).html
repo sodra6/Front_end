@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            width: 600px;
+            height: 60px;
+            position: absolute;
+            color: #fff;
+            margin: 0;
+            border: 10px solid #424242;
+            background-color: #424242;
+            left: -50px;
+            top: 50px;
+            line-height: 60px;
+            text-indent: 15px;
+            box-shadow: 14px 14px 24px black;
+        }
+        h1::before{
+            content: "";
+            position: absolute;
+            border-top: 30px solid #323232;
+            border-left: 30px solid transparent;
+            top: 70px;
+            left: -10px;
+        }
+        #box{
+            position: fixed;
+            width: 800px;
+            height: 600px;
+            left: 50%;
+            top: 50%;
+            margin-top: -300px;
+            margin-left: -400px;
+            border: 20px solid #424242;
+            background-size: 100%;
+            box-shadow: 14px 14px 24px black;
+        }
+        #triangle::after{
+            position: fixed;
+            content: "";
+            border-left: 30px solid transparent;
+            border-top: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid black;
+
+        }
+    </style>
+</head>
+<body>
+<div id="triangle"></div>
+
+<!-- 자신이 좋아하는 인물이나 물건등으로 해보세요. -->
+<div id="box">
+    <h1>DBS Superleggera 007 Edition</h1>
+    <img src="img/dbs.jpg" width="800"/>
+</div><!--//box-->
+</body>
+</html>

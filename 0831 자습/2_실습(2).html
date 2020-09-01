@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #phone{
+            position: fixed;
+            width: 327px;
+            height: 586px;
+            background-image: url("img/phone-shadow.png"), url("img/phone-overlay.png"), url("img/screen-overview.jpg");
+            left: 50%;
+            top: 50%;
+            margin-top: -298px;
+            margin-left: -168.5px;
+            background-size:  327px 100px, 327px 586px, 240px 370px;
+            background-position: 0px 600px, 0px 0px, 43.5px 80px;
+            background-repeat: no-repeat;
+        }
+        #fox{
+            width: 156px;
+            height: 156px;
+            position: absolute;
+            background-image: url("img/foxtail.png");
+            left: 50%;
+            top: 50%;
+            margin-left: -78px;
+            margin-top: -78px;
+            animation: ani1 2s infinite steps(45);
+        }
+        @keyframes ani1 {
+            0% {background-position: 0 0}
+            100%{background-position:7020px 0}
+        }
+    </style>
+</head>
+<body>
+<div id="phone">
+    <div id="fox"></div>
+</div>
+</body>
+</html>
