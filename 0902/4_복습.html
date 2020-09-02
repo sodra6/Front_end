@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>난수설정 및 변수설정</title>
+    <style>
+        body{
+            background-color: rgb(255, 188, 255);
+            user-select: none;
+            cursor: pointer;
+        }
+        #circle{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            color: #fff;
+            background-color: rgb(12, 59, 12);
+            box-shadow: 12px 12px 24px #000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 500px;
+            font-size: 250px;
+            transition: .2s linear;
+        }
+
+    </style>
+</head>
+<body>
+<div id="circle">1</div>
+<script src="js/jquery.js"></script>
+<script>
+    let font = 1
+    $('html').click(function (evt) {
+        let r = Math.floor(Math.random()*255)//배경색상 r값에 대한 난수설정
+        let g = Math.floor(Math.random()*255)//배경색상 g값에 대한 난수설정
+        let b = Math.floor(Math.random()*255)//배경색상 b값에 대한 난수설정
+        let r1 = Math.floor(Math.random()*255)//원색상 r값에 대한 난수설정
+        let g2 = Math.floor(Math.random()*255)//원색상 g값에 대한 난수설정
+        let b3 = Math.floor(Math.random()*255)//원색상 b값에 대한 난수설정
+        let n = Math.floor(Math.random()*500)+20//원크기 및 글자속성에대한 난수설정
+        console.log(evt.clientX)//이벤트객체에 대한 좌표X값에 대한 변수
+        console.log(evt.clienty)//이벤트객체에 대한 좌표Y값에 대한 변수
+        let x = evt.clientX-n/2
+        let y = evt.clientY-n/2
+        $('body').css('backgroundColor','rgb('+r+','+g+','+b+')');//body.css() end
+        font = font+1
+        $('#circle').css({
+            backgroundColor:'rgb('+r1+','+g2+', '+b3+')',
+            width: ''+n+'px',
+            height: ''+n+'px',
+            lineHeight:''+n+'px' ,
+            fontSize: ''+n/2+'px',
+            left: x,
+            top: y
+        }).text(font)//#circle.css() end
+    })
+
+</script>
+</body>
+</html>

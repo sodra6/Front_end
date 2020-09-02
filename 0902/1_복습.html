@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>버튼1</button>
+<button>버튼2</button>
+<button>버튼3</button>
+<button>버튼4</button>
+<script src="js/jquery.js"></script>
+<script>
+
+    $('button').click(function () {
+       const n = $(this).index()+1
+        alert(''+n+'번째 버튼')
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        .bg{
+            width: 100px;
+            height: 50px;
+            color: #fff;
+            font-size: 20px;
+            border: 0;
+        }
+        #r{
+            background-color: red;
+        }
+        #b{
+            background-color: blue;
+        }
+        #g{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<button class="cha">변경</button>
+<button class="cha">변경</button>
+<button class="cha">변경</button>
+<button class="cha">변경</button>
+<button class="cha">변경</button>
+<button class="cha">변경</button>
+<button class="cha">변경</button>
+<button class="cha">변경</button>
+<div><img src="img/footer_face01.gif"></div>
+<div>
+    <button id="b" class="bg">blue</button>
+    <button id="r" class="bg">red</button>
+    <button id="g" class="bg">green</button>
+    <div id="box"></div>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    $('.cha').click(function () {
+        const n = $(this).index()+1
+        $('img').attr("Src",'img/footer_face0'+n+'.gif')
+    })
+    $('.bg').click(function () {
+        $('#box').css({
+            backgroundColor:$(this).css('background-color')
+    })
+    })
+    function taxi(num1, num2){
+        return num1+num2;
+    }
+    const result = taxi(5,9)
+    alert(result);
+</script>
+</body>
+</html>

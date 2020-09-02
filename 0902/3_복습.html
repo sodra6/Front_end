@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Setter Getter 객체</title>
+</head>
+<body>
+<div>
+<button id="chg">변경!</button>
+<button id="wd">width얻기</button>
+<button id="all">한번에 변경</button>
+</div>
+<img src="img/footer_face01.gif" alt="무지">
+<script src="js/jquery.js"></script>
+<script>
+    let n =1
+    $('#chg').click(function () {
+       //n= n % 8 + 1
+        n=n+1
+         if (n>8)
+             n=1
+        $('img').attr('src','img/footer_face0'+n+'.gif')
+    })
+    $('#wd').click(function () {
+        const width = $('img').css('width')
+        alert(width)
+    })
+    $('#all').click(function () {
+         $('img').attr({
+            'src':'img/scappy.gif',
+            'alt':'스카피'})
+        const scappy = $('img').attr('alt')
+        alert(scappy)
+    })
+</script>
+
+</body>
+</html>
