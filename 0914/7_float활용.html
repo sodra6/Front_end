@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>float의 활용</title>
+    <style>
+        #parent{
+            width: 300px;
+            border: 5px solid #424242;
+            overflow: hidden;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            /*
+            float을 적용할경우 공간을 차지 하지않기 때문에 부모의 height 값이 사라짐
+
+            해결책
+            - 부모의 height 값을 주면됨
+            - 부모에 height 값을 고정하지 못할 경우 : overflow:hidden을 주면됨
+            - float이 끝나는 다음 형제에 clear:both
+            - 가상요소를 활용하여 clear:both 지정
+            */
+            float: left
+        }
+        #red{background: #e91e63}
+        #blue{background: #03a9f4}
+        #green{background: #4caf50}
+        #yellow{background: #ffeb3b;width: 300px;height: 100px;clear: both}
+    </style>
+</head>
+<body>
+<div id="parent">
+    <div id="red" class="box"></div>
+    <div id="blue" class="box"></div>
+    <div id="green" class="box"></div>
+    <div id="yellow"></div>
+</div>
+
+</body>
+</html>

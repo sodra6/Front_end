@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지수직메뉴</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <style>
+        #gnb{
+            width: 300px;
+            margin: auto;
+            background-color: beige;
+        }
+        #gnb li{
+            height: 100px;
+            text-align: center;
+        }
+        #gnb li a{
+            font-size: 24px;
+            line-height: 100px;
+            text-decoration: none;
+            display: block;
+            width: 300px;
+            height: 100px;
+            transition: .2s linear;
+        }
+        #gnb .mail{
+            background-image: url("img/mail_a.gif");
+            text-indent: -9999px;
+            transition: .2s ease;
+        }
+        #gnb .mail:hover{
+            background-image: url("img/mail_a.gif");
+            background-position: 0 -100px;
+            box-shadow: inset 0 0 12px #424242;
+        }
+        #gnb .mail:active{
+            background-image: url("img/mail_a.gif");
+            background-position: 0 -200px;
+        }
+        #gnb .cafe{
+            background-image: url("img/cafe_a.gif");
+            text-indent: -9999px;
+            transition: .2s ease;
+        }
+        #gnb .cafe:hover{
+            background-image: url("img/cafe_a.gif");
+            background-position: 0 -100px;
+            box-shadow: inset 0 0 12px #424242;
+        }
+        #gnb .cafe:active{
+            background-image: url("img/cafe_a.gif");
+            background-position: 0 -200px;
+        }
+        #gnb .blog{
+            background-image: url("img/blog_a.gif");
+            text-indent: -9999px;
+            transition: .2s ease;
+        }
+        #gnb .blog:hover{
+            background-image: url("img/blog_a.gif");
+            background-position: 0 -100px;
+            box-shadow: inset 0 0 12px #424242;
+        }
+        #gnb .blog:active{
+            background-image: url("img/blog_a.gif");
+            background-position: 0 -200px;
+        }
+        #gnb .kin{
+            background-image: url("img/kin_a.gif");
+            text-indent: -9999px;
+            transition: .2s ease;
+        }
+        #gnb .kin:hover{
+            background-image: url("img/kin_a.gif");
+            background-position: 0 -100px;
+            box-shadow: inset 0 0 12px #424242;
+        }
+        #gnb .kin:active{
+            background-image: url("img/kin_a.gif");
+            background-position: 0 -200px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="gnb"><!--gnb(global navigation bar-->
+    <!--
+            screen_out 클래스를 주면 css상에서 숨김
+            (시멘틱웹이나 웹접근성을 위해서 필요한 글자이지만
+            디자인 및 레이아웃에서 필요없는 요소들을 위해서)
+      -->
+    <h1 class="screen_out">주요 서비스</h1>
+    <ul>
+        <li class="mail"><a href="https://mail.naver.com/">메 일</a></li>
+        <li class="cafe"><a href="https://section.cafe.naver.com/">카 페</a></li>
+        <li class="blog"><a href="https://section.blog.naver.com/">블로그</a></li>
+        <li class="kin"><a href="https://kin.naver.com/">지식in</a></li>
+    </ul><!-- gnb end -->
+</div>
+</body>
+</html>

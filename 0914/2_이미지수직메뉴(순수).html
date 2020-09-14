@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 수직메뉴</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+        #gnb{
+            width: 300px;
+            height: 400px;
+            background: red;
+            margin: auto;
+        }
+        #gnb li{
+            width: 300px;
+            height: 100px;
+            background: blue;
+            /*display: inline-block;*/
+        }
+        #gnb li>a{
+            width: 300px;
+            height: 100px;
+            /*
+            뒷배경의 기본속성 이미지 기본속성이 적용되있어서 밑에서 적용이 안됨, 구체성이 더 높은것도 한 몫
+            0 1 0 2(구체성)
+            */
+            background: green;
+            display: block;
+            text-decoration: none;
+            text-indent: -9999px;
+            overflow: hidden;
+            transition: .2s linear;
+
+        }
+        #gnb a:hover{
+            background-position: 0 -100px;
+        }
+        #gnb a:active{
+            /* 각속성마다 트렌지션은 따로 적용 가능 */
+            transition: background-position 0s ease, box-shadow .5s ease;
+            background-position: 0 -200px;
+            box-shadow: inset 0 0 12px #424242;
+        }
+        #gnb .mail>a{
+            background-image: url("img/mail_a.gif");
+        }
+        #gnb .cafe>a{
+            background-image: url("img/cafe_a.gif");
+        }
+        #gnb .blog>a{
+            background-image: url("img/blog_a.gif");
+        }
+        #gnb .kin>a{
+            background-image: url("img/kin_a.gif");
+        }
+    </style>
+</head>
+<body>
+<div id="gnb">
+    <h2 class="screen_out">주요 서비스</h2>
+    <ul>
+        <li class="mail"><a href="">메 일</a></li>
+        <li class="cafe"><a href="">카 페</a></li>
+        <li class="blog"><a href="">블로그</a></li>
+        <li class="kin"><a href="">지식in</a></li>
+    </ul>
+</div><!--// gnb -->
+</body>
+</html>

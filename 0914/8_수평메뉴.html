@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/notosanskr.css" />
+    <style>
+        body{
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        #gnb{
+            width: 650px;
+            margin: auto;
+            border: 10px solid #424242;
+            /*height: 50px;*/
+            overflow: hidden;
+            border-right: none;
+        }
+        #gnb::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        #gnb li{
+            width: 120px;
+            height: 50px;
+            float: left;
+            border-right: 10px solid #424242;
+        }
+        #gnb li>a{
+            width: 120px;
+            height: 50px;
+            /*background: red;*/
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            color: #03a9f4;
+            transition: .2s linear;
+        }
+        #gnb li>a:hover{
+            background-color: #0277bd;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+<div id="gnb">
+    <h2 class="screen_out">주요서비스</h2>
+    <ul>
+        <li ><a href="">카페</a></li>
+        <li><a href="">메일</a></li>
+        <li><a href="">뉴스</a></li>
+        <li><a href="">지도</a></li>
+        <li><a href="">증권</a></li>
+    </ul>
+</div>
+</body>
+</html>

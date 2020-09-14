@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>블록레벨의 수평레이아웃</title>
+    <style>
+        .box{
+            width: 900px;
+            /*해결책 1번*/
+            /*height: 120px;*/
+            background: sienna;
+            /*해결책 2번*/
+            /*overflow: hidden;*/
+        }
+        .box div{
+            width: 160px;
+            height: 120px;
+            background-size: 100% 100%;
+            float: left;
+        }
+        .box div:nth-child(1){
+            background-image: url("img/c1.jpg");
+        }
+        .box div:nth-child(2){
+            background-image: url("img/c2.jpg");
+        }
+        .box div:nth-child(3){
+            background-image: url("img/c3.jpg");
+        }
+        .box div:nth-child(4){
+            background-image: url("img/c4.jpg");
+        }
+        .box div:nth-child(5){
+            background-image: url("img/c5.jpg");
+        }
+        .box::after{
+            /*
+            가상요소에는 content 속성이 필요
+            가상요소는 inline 레벨임 clear 지정은 블록레벨에게만 줄 수 있음
+            */
+
+
+            content: "";
+            display: block;
+            clear: both;
+        }
+        h1{background-color: red;}
+    </style>
+</head>
+<body>
+<div class="box">
+       <div></div><!--
+    --><div></div><!--
+    --><div></div><!--
+    --><div></div><!--
+    --><div></div>
+</div>
+<h1>엄청 큰 문제가 생겨요!!</h1>
+<!--
+    블록레벨은 줄바꿈이 일어납니다.
+    기본적으로는 수직레이아웃
+    그런데 웹서비스에서는 수평인경우가 정말 많음
+
+    블록레벨의 수평레이아웃 방법
+    1) float(2000년대 초반, 원래 레이아웃용이 아니었음)
+    2) inline-block(2010년대 부터 : 익스플로러 8부터 적용용)
+   3) flex-box(CSS3이고 최신인데 데스크탑웹에서는 실용적이나 브라우저중 적용안되는 경우도 있음)
+
+    역사적으로 흘러가듯 가~~!
+-->
+
+</body>
+</html>
