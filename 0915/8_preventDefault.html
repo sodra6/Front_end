@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>preventDefault() 메소드</title>
+</head>
+<body>
+
+<form id="form" action="login.do">
+    <input />
+    <button>검색</button>
+</form>
+<a href="http://jr.naver.com">쥬니버네이버로 이동</a>
+<!--form과 a요소에서 많이쓰임-->
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        이벤트.preventDefault()는 a요소에서 링크이동이나
+        form에서 submit을 막음
+     */
+    $('a').on('click', function (evt) {
+        alert('zz')
+        evt.preventDefault(evt);
+    })//a click() end
+    $('#form').on('submit',function (evt) {
+        alert('가지마!')
+        evt.preventDefault()
+    })//#form submit() end
+</script>
+</body>
+</html>

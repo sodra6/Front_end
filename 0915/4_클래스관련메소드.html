@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클래스관련 메소드</title>
+    <style>
+        button{
+            margin-bottom: 20px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #b2ebf2;
+        }
+        .circle{
+            border-radius: 50%;
+            background-color: #f8bbd0;
+        }
+    </style>
+</head>
+<body>
+<button id="toggleBtn">붙였다 때기</button>
+<div class="box circle"></div>
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        on(이벤트명, 함수) :
+    */
+    const $box = $('.box');
+    $('#toggleBtn').on('click', function () {
+        $box.toggleClass('circle')
+        //if ($box.hasClass('circle')){
+            //circle이 있으니까 제거
+            //$box.removeClass('circle');
+           // alert("true!");
+        //}//if() end
+        //else {
+            //alert('false')
+            //$box.addClass('circle');
+        //}//else() end
+    });//on() end
+    /*
+        클레스 관련 메소드(고정된 값인데 변경될때 사용)
+        - addClass(클래스명) : 해당클래스를 추가
+        - removeClass(클래스명) : 해당클래스명만 제거
+        - hasClass(클래스명) : 해당클래스를 가지고 있으면 true 없으면 false
+        - toggleClass(클래스명) : 한번에 add, remove 작동시키는 코드
+
+
+        text()
+        css()
+        val()
+        attr()
+     */
+</script>
+</body>
+</html>

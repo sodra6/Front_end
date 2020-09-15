@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: 'GmarketSansBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body{
+            font-family: 'GmarketSansBold', sans-serif;
+        }
+        button, textarea, select, input{
+            font-family: 'GmarketSansBold';
+            width: 100px;
+            height: 50px;
+            padding: 8px 12px;
+            font-size: 15px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+<h1>나는 무슨폰트? 지마켓폰트</h1>
+<p>나도 지마켓?</p>
+<div>응 너도 지마켓</div>
+<em>오호 지마켓?</em>
+<hr/>
+<!-- 대체되는 요소들에는 폰트가 상속이 안됨-->
+<!--그렇기 떄문에 직접적용하면됨-->
+<input/>
+<textarea></textarea>
+<select>
+    <option>대한민국</option>
+    <option>미합중국</option>
+    <option>북괴국</option>
+    <option>절므니</option>
+    <option>영국</option>
+</select>
+<button>누르셈</button>
+
+</body>
+</html>

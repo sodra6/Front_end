@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>요소의 탐색</title>
+    <style>
+        td, th{
+            width: 60px;
+            padding: 10px 0px;
+            border: 1px solid #424242;
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;
+            font-size: 20px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </tbody>
+</table>
+<script src="js/jquery.js"></script>
+<script>
+    //배열에서 두번째것을 선택(트리구조를 생각할것)
+    $('td').eq(1).css('background','red')//2번째 td
+            .next()//3번 td
+            .css('background','yellow')
+            .prev()//2번 td
+            .prev()//1번 td
+            .css('background', '#424242')
+            .parent()//1번쨰 tr
+            .next()//2번쨰 tr
+            .children()//5,6,7,8번 td
+            .eq(2)//2번쨰 td선택
+            .css('background', '#00bcd4')
+            .parent()//2번째 tr 선택
+            .next()//3번째 tr 선택
+            .find('td:eq(1)')//10번 td를 바로 선택
+            .css('background','pink')
+
+    //각각 자식들의 두번쨰 자식을 선택
+    // $('td:nth-child(2)').css('background','blue');
+    //하나만 css로 선택할때는 요로케
+    // $('tr:nth-child(3)>td:nth-child(1)').css('background','green');
+
+    /*
+        탐색관련 메서드
+        - eq(인덱스) : 배열중 해당 index번지 요소 선택
+        - next() : 다음요소 선택
+        - prev() : 이전요소 선택
+        - parent() : 부모요소 선택
+        - parents(선택자) : 조상요소들 중 선택
+        - children() : 자식요소들 선택
+        - find(선택자) : 자손요소들 중 선택
+     */
+
+</script>
+</body>
+</html>

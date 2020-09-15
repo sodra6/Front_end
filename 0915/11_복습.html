@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>요소추가생성</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body{
+            user-select: none;
+        }
+        .circle{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: rgb(210, 150, 2);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            font-size: 50px;
+            color: #fff;
+            transition: .2s ease;
+        }
+    </style>
+
+</head>
+<body>
+<div class="circle">1</div>
+<script src="js/jquery.js"></script>
+<script>
+    let num=1
+    let a=1
+
+    function play () {
+        $('html').click(function (e) {
+            a+=1
+            const num = Math.floor(Math.random()*300)+20;
+            const x=e.clientX;
+            const y=e.clientY;
+            const r= Math.floor(Math.random()*256)+1;
+            const g= Math.floor(Math.random()*256)+1;
+            const b= Math.floor(Math.random()*256)+1;
+            // alert(num)
+            $('.circle').css({
+                width: '' + num + 'px',
+                height: '' + num + 'px',
+                lineHeight: '' + num + 'px',
+                fontSize: '' + num / 2 + 'px',
+                left:x,
+                top:y,
+                backgroundColor:'rgb('+r+','+g+','+b+')'
+            }).text(a).attr('#circle')//circle.css() end.
+            $('body').click(function () {
+                // const body = '<div class="circle"></div>'
+                // $('body').append(body)
+            })
+        })//click() end
+    };//function() // end
+    play();
+</script>
+</body>
+</html>
