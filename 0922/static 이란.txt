@@ -1,0 +1,25 @@
+static			|				heap				|			static
+				|									|	int b= 0							|									|       main()
+				|									|	
+				|									|
+
+
+class A{
+int a;
+static int b;
+main() {
+	A a = new A();
+	A b = new A();
+	a.a = 7;
+	b.b=6;
+syso(b.a);
+syso(b.b);
+}//main end
+}//A end
+
+.java파일을 .class파일로 컴파일하고 jvm이 실행, jvm이 실행되면 static으로 선언된 멤버들을 모두 static영역 메모리에 실행시킴, 
+static은 객체를 생성하지 않고도 사용할 수 있다. - static의 장점
+static은 클래스명.변수명으로 접근한다.
+
+지역변수는 접근제한자나 static이 없음(멤버에만 해당되는 얘기)
+ㅇㅇㅇ접근제한자이고 기본자료형 ㅇㅇㅇ형의 static 멤버필드 or 지역변수, 
