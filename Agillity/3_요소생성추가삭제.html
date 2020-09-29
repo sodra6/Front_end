@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+
+       #animalList{
+            width: 200px;
+            background-color: skyblue;
+            list-style: none;
+            margin: 0;
+            padding: 20px;
+        }
+       /*0 1 0 1*/
+       #animalList li{
+            width: 200px;
+            height: 60px;
+            background-color: lightpink;
+            text-align: center;
+            line-height: 60px;
+            cursor: pointer;
+           margin: 10px 0;
+        }
+       /*0 1 1 1*/
+       #animalList li:hover{
+            background-color: deeppink;
+
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+        <input id="name" placeholder="동물이름 입력해주세요" autocomplete="off">
+        <button id="createBtn">생성</button>
+        <button id="removeAllBtn">전부 삭제</button>
+    </p>
+
+    <ul id="animalList">
+        <li>개미핥기</li>
+    </ul>
+
+
+<script src="js/jquery.js"></script>
+
+<script>
+
+    /*
+        인자 2개짜리 : 우리가 알고 있는 그순간 존재하고있던 요소들에게만 이벤트 리스너를 붙임
+         - 자신.on(이벤트명,이벤트핸들러함수)
+        인자 3개짜리 : 조상에 자신이 붙으면 이벤트리스너가 붙음
+        (아직 존재하지않은 요소에도 이벤트리스너를 붙일 수 있음)
+        조상.on(이벤트명,자신,이벤트 핸들러함수)
+    */
+    $("#animalList").on("click","li",function () {
+        //요소삭제 : remove
+        $(this).remove();
+    })
+
+    /*
+        - 부모.append(자식) : 자식을 부모의 마지막 자식으로 추가
+        - 자식.appendTo(부모) : 자식을 부모의 마지막 자식으로 추가
+        - 부모.prepend(자식) : 자식을 부모의 첫번째 자식으로 추가
+        - 자식.prependTo(부모) : 자식을 부모의 첫번째 자식으로 추가
+
+        - 기존 형제.after(새로 추가 할 요소)
+        - 새로추가되는요소.insertAfter(기존형제)
+        - 기존형제.before(새로 추가 할 요소)
+        - 새로추가되는요소.insertBefore(기존형제)
+
+     */
+    function createItem() {
+
+        const txt =$("#name").val();
+
+        // append를 활용
+        // const $li= $("<li>").text(txt);
+        // $('#animalList').append($li);
+        //
+        // appendTo를 활용
+        const $li= $("<li>").text(txt).appendTo("#animalList")
+        //
+        // 부모.prepend(자식) 활용
+        // $("#animalList").prepend($("<li>").text(txt));
+        //
+        // 자식.prependTo(부모) 활용
+        // $("<li>").text(txt).prependTo("#animalList");
+        //
+        // 기존 형제.after(새로 추가 할 요소) 활용
+        // $("li:last").after($("<li>").text(txt));
+        //
+        // 새로추가되는요소.insertAfter(기존형제)
+        // $("<li>").text(txt).insertAfter("li:last");
+        //
+        // 기존형제.before(새로 추가 할 요소)
+        // $("li:first").before($("<li>").text(txt));
+        //
+        // 새로추가되는요소.insertBefore(기존형제)
+        // $("<li>").text(txt).insertBefore("li:first");
+        //
+        // after와 before는 기존 요소에 추가하는 방식이여서 .empty() 메서드 사용후엔
+        // 기존 요소가 다사라진 상태여서 작동이 안된다. 따라서 empty 메서드 사용시엔
+        // append 와 prepend를 활용해야한다.
+
+
+        $("#name").val("").focus();
+
+
+
+    } //createItem() end
+
+    $('#createBtn').click(createItem);
+
+    $('#name').keyup(function (e) {
+
+        if(e.keyCode == 13){
+            createItem();
+        }// if end
+    });
+
+    $("#removeAllBtn").click(function () {
+
+        // 자식요소들 전부 비우기
+        $("#animalList").empty();
+    });
+</script>
+
+</body>
+</html>

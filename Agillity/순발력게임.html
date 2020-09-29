@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>우주최강 순발력 게임</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/notosanskr.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        body {
+            font:100 16px 'Noto Sans KR',sans-serif;
+            text-align: center;
+            user-select: none;
+            /*font-weight:500;*/
+            /*font-size:16px;*/
+            /*font-family:'Noto Sans KR',sans-serif;*/
+        }
+
+        #wrap {
+            width:800px;
+            height:700px;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            position: fixed;
+            left:50%;
+            top:50%;
+            margin:-350px 0 0 -400px;
+        }
+
+        #header,#footer {
+            width:800px;
+            height:100px;
+            line-height: 100px;
+        }
+        #header h1 {
+            font-size:40px;
+            font-weight: 900;
+        }
+        #content {
+            width:500px;
+            height:500px;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+            0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            margin:auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #coverBtn {
+            width:500px;
+            height:500px;
+            border: none;
+            cursor: pointer;
+            background-color: #1e5489;
+            font-size: 300px;
+            color:#fff;
+            transition: .2s ease;
+            position: absolute;
+            left:0;
+            outline: none;
+        }
+
+        #coverBtn:hover {
+            text-shadow: 0 0 20px #fff;
+            background-color: #0e4271;
+        }
+
+        #coverBtn.open {
+            left : -500px;
+        }
+
+        #numberList li {
+            width:100px;
+            height:100px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+            0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            color:#fff;
+            font-weight:900;
+            font-size:60px;
+            text-shadow:0 0 2px #424242;
+            line-height: 100px;
+            float: left;
+            user-select: none;
+            cursor: pointer;
+
+        }
+
+        #numberList li.hide {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+    <h1><i class="fas fa-gamepad"></i> 우주최강 순발력 게임</h1>
+    </div>
+    <div id="content">
+        <button id="coverBtn" class="fas fa-power-off">
+            <span class="screen_out">게임시작</span>
+        </button>
+        <ul id="numberList">
+
+        </ul>
+    </div><!-- content end -->
+    <div id="footer">
+        &copy; 2020 bmj.com
+    </div><!-- footer end -->
+
+</div><!--wrap end-->
+<script src="js/jquery.js"></script>
+<script src="js/random-color.js"></script>
+<script src="js/shuffleArray.js"></script>
+<script>
+    //시작버튼
+    const $coverBtn = $("#coverBtn");
+    //넘버목록
+    const $numberList=$("#numberList");
+    //정답을 저장하는 변수
+    let answer = 24;
+    //시작시간을 저장하는 변수
+    let start;
+
+
+    //2020-09-28 15:49 조용규
+    function setNumBox() {
+        //랜덤한 색상을 만들고 랜덤한 번호로 li 생성후 ul에 append
+        //for문 사용해서 li 생성후에 ul에 append
+        const numbers = getShuffleNumbers(25);
+        for(let i=0; i<25; i++){
+            $("<li>").text(numbers[i]).css("background",getRandomColor()).appendTo("#numberList");
+        }
+    }//setNumBox() end
+    getShuffleNumbers();
+    setNumBox();
+    $coverBtn.on("click", function () {
+        $coverBtn.addClass("open");
+        start = new Date();
+    })//coverBtn click() end
+    $("#numberList").on("click","li",function () {
+        //우리가 클릭한 그요소의 글자를 얻어옴
+        const $this=$(this)
+        const num = $this.text();
+
+        if (num==answer) {
+            $this.addClass("hide");
+            answer++;
+            if (answer>=26){
+                const end = new Date();
+                alert(end-start/1000+"초");
+                //한판 끝남전부 비우기
+                $numberList.empty();
+                //시작 닫기
+                $coverBtn.removeClass("open")
+                //정답도 초기화
+                answer=1;
+                //다시 셋팅
+                setNumBox();
+
+
+            }//if end
+        }
+        else {
+            alert("바보냐?")
+        }
+    })//li click end
+
+</script>
+</body>
+</html>

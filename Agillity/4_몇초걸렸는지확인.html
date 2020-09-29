@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>ㄴㄼ</button>
+<script src="js/jquery.js"></script>
+<script>
+
+    //실행하자마자 Date객체 생성
+    const start = new Date();
+    $('button').on("click",function () {
+        const end = new Date();
+
+        alert(end-start);
+    })
+</script>
+</body>
+</html>
