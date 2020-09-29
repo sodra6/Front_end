@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel=" stylesheet" href="css/all.min.css">
+</head>
+<body>
+<h1>당신이 가고 싶은 사이트를 클릭하세요!</h1>
+<button data-site="google" class="fab fa-google">구글</button>
+<button data-site="facebook" class="fab fa-facebook">페이스북</button>
+<button data-site="twitter" class="fab fa-twitter">트위터</button>
+<button data-site="instagram" class="fab fa-instagram">인스타그램</button>
+<script src="js/jquery.js"></script>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+
+    $("button").on("click",function () {
+
+        //3가지 방법으로 사용용
+       const site = $(this).data("site")
+        //const site = $(this).attr("data-site")
+        //const site = this.dataset.site
+        location.href="http://"+site+".com"
+    })
+</script>
+</html>

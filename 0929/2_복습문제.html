@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel=" stylesheet" href="css/reset.css">
+    <link rel=" stylesheet" href="css/all.min.css">
+    <link rel=" stylesheet" href="css/notosanskr.css">
+    <style>
+        body{
+        }
+        h1{
+            font: 900 50px "Noto Sans KR",sans-serif;
+        }
+        button{
+            font: 500 20px "Noto Sans KR",sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h1>당신이 가고 싶은 사이트를 클릭하세요!</h1>
+<button id="google" class="fab fa-google">구글</button>
+<button id="facebook" class="fab fa-facebook">페이스북</button>
+<button id="twit" class="fab fa-twitter">트위터</button>
+<button id="instagram" class="fab fa-instagram">인스타그램</button>
+<script src="js/jquery.js"></script>
+<script>
+    const $google=$("#google")
+    const $facebook=$("#facebook")
+    const $twitter=$("#twit")
+    const $instagram=$("#instagram")
+
+    $google.on("click",function () {
+            location.href="https://google.com";
+    })
+    $facebook.on("click",function () {
+            location.href="https://facebook.com";
+    })
+    $twitter.on("click",function () {
+            location.href="https://twitter.com";
+    })
+    $instagram.on("click",function () {
+            location.href="https://instagram.com";
+    })
+</script>
+</body>
+</html>

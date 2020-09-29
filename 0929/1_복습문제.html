@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/notosanskr.css">
+    <style>
+        body{
+            font-family: "Noto Sans KR",sans-serif;
+            text-align: center;
+        }
+        #wrap{
+            width: 1000px;
+            margin: 100px auto;
+        }
+        #wrap h1{
+            height: 100px;
+            font-size: 60px;
+            font-weight: 700;
+            position: relative;
+            transition: .2s ease;
+        }
+        #wrap h1.scale{
+            height: 100px;
+            font-size: 100px;
+            font-weight: 700;
+            color: purple;
+            text-shadow: 0 0 24px #424242;
+            transition: .2s ease;
+        }
+        #wrap button{
+            font-family: "Noto Sans KR",sans-serif;
+            left: 450px;
+            font-size: 30px;
+            width: 150px;
+            height: 80px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            background: lightskyblue;
+            outline: none;
+            position: absolute;
+            transition: .2s ease;
+        }
+        #wrap button:hover{
+            background: deepskyblue;
+            text-shadow: 0 0 24px #fff;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <h1>버튼을 눌러보셔유</h1>
+    <button>버어어어튼</button>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    $("#wrap button").on("click", function () {
+        $("#wrap h1").toggleClass("scale");
+    })
+</script>
+</body>
+</html>

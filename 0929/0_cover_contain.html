@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>cover & contain</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            margin: 0;
+            height: 100%;
+            background-image: url("img/ryan2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-color: #92d9df;
+        }
+        #cover, #contain{
+            width: 350px;
+            height: 350px;
+            border: 1px solid #424242;
+            float: left;
+            margin: 10px;
+            background-image: url("img/ㄷㄷㄷㅈ.jpg");
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #cover{
+            /*
+             cover는 요소를 전부 덮음(이미지 안보일 수도 있음) -> 요소중심
+            */
+            background-size: cover;
+        }
+        #contain{
+            /*
+             contain은 이미지 전부 보임(요소를 전부 덮지 못할 수 있음) -> 이미지중심
+            */
+            background-size: contain;
+        }
+        /*
+        요소와 이미지의 크기가 다른건 아~~~~무상관없음
+        요소와 이미지의 비율이 다를때 오또케 할것이냐??
+        background-size: cover or contain
+         */
+
+
+    </style>
+</head>
+<body>
+<div id="cover"></div>
+<div id="contain"></div>
+
+</body>
+</html>

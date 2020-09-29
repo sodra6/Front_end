@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/notosanskr.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        body{
+            text-align: center;
+        }
+        /*
+                font는 font-size, font-weight, font-varient, font-style, font-family,
+                line-height까지 한번에 쓰는 대표속성
+
+                순서가 제일 뒤가 font-family
+                뒤에서 두번째가 font-size
+         */
+        h1,button{
+            font-family: "Noto Sans KR",sans-serif;
+        }
+        h1{
+            font-size: 60px;
+            font-weight: 900;
+            height: 120px;
+            line-height: 120px;
+            color: #424242;
+            transition: .2s ease;
+        }
+        button{
+            border: none;
+            cursor: pointer;
+            padding: 10px 30px;
+            background: azure;
+            font: 700 30px "Noto Sans KR",sans-serif;
+            outline: none;
+            transition: .2s ease;
+        }
+        button:hover{
+            background: #67eab7;
+            box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+        }
+        h1.big{
+            transform: scale(1.2);
+            color: silver;
+            text-shadow: 0 0 10px #424242;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <h1>버튼을 눌러보셔유</h1>
+    <button>버어어어튼</button>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    const $h1=$("h1")
+    $("button").on("click",function () {
+        $h1.toggleClass("big");
+    })
+</script>
+</body>
+</html>

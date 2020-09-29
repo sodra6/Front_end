@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            margin: 0;
+            height: 100%;
+        }
+        #openBtn{
+            border: none;
+            background-color: #424242;
+            color: #fff;
+            position: fixed;
+            width: 100px;
+            height: 50px;
+            left: 50%;
+            top: 50%;
+            margin: -25px 0 0 -50px;
+            transition: .2s ease;
+        }
+        #openBtn:hover{
+            background-color: #67eab7;
+            box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+        }
+        #popup{
+            height: 100%;
+            background-color: #ffde2f;
+            background-size: contain;
+            background-image: url("img/bg.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<button id="openBtn"><i class="fas fa-smile"></i> 콜릭콜릭</button>
+<div id="popup"></div>
+<script src="js/jquery.js"></script>
+<script>
+    const $popup = $("#popup")
+
+    $("#openBtn").on("click",function () {
+        $popup.fadeToggle()
+    })
+
+    $("#popup").on("click",function () {
+        $popup.fadeOut();
+    })
+</script>
+</body>
+</html>
