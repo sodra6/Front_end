@@ -1,0 +1,24 @@
+Oracle db
+
+HR == human resource
+
+DBMS(Database Management System)
+
+RDBMS(관계형데이터베이스)
+
+SQL == Structured Query Language
+
+데이터의 흐름
+
+C : Create = insert(SQL구문)
+R : Read = select(SQL구문)
+U : Update = update(SQL구문)
+D : Delete = delete(SQL구문)
+
+SELECT 컬럼명.. (* 전부표시 키워드)
+FROM 테이블명
+WHERE 조건식 (LIKE연산자 %, _)
+ORDER BY 정렬할컬럼명(컬럼번호) ASC(오름차순) or DESC(내림차순)
+
+
+FROM -> WHERE -> SELECT -> ORDER BY
