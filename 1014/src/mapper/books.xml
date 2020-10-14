@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="books"><!-- 네임스페이스에 테이블명 입력 -->
+
+	<delete id="delete" parameterType="int">
+		DELETE books
+		WHERE no=#{no}	<!-- 변수처리는 #{} 개발자가 mybatis에게 넘겨주는 자료형을 파라미터타입으로 설정 -->
+	</delete>
+
+	<insert id="insert" parameterType="vo.Book">
+		INSERT INTO books(no,title,author,page_num,publication_date)
+		VALUES(books_seq.nextval,#{title},#{author},#{pageNum},#{publicationDate})
+		<!-- 파라미터타입은 vo.클래스명, 변수명에는 멤버필드 명을 써준다 -->
+	</insert>
+	
+	<update id="update" parameterType="vo.Book">
+		UPDATE books
+		SET title=#{title}
+		WHERE no=#{no}
+	</update>
+
+</mapper>

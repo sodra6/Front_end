@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+<!-- 데이터베이스와 연결하는 환경설정이 필요 -->
+<environments default="development"><!-- 디폴트값과 아이디 값을 같게 설정 -->
+	<environment id="development">
+		<transactionManager type="JDBC"/>
+		<dataSource type="POOLED">
+			<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+			<property name="driver" value="oracle.jdbc.OracleDriver"/>
+			<property name="username" value="test"/>
+			<property name="password" value="1111"/>
+		</dataSource>
+	</environment>
+</environments>
+<!-- mapper 경로 설정 -->
+<mappers>
+<mapper resource="mapper/idols.xml"/>
+
+</mappers>
+</configuration>
