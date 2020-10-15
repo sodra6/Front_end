@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="employees"><!-- 네임스페이스에 테이블명 입력 -->
+
+	<select id="selectList" resultType="Employee"> <!-- config파일에서 Alias를 클래스명으로 설정해놔서 경로를 생략 -->
+		SELECT employee_id employeeId, first_name firstName, last_name lastName, email, phone_number phoneNumber, hire_date hireDate, job_id jobId, salary, commission_PCT commissionPct, manager_id managerId, department_id departmentId
+		FROM employees
+		ORDER BY 1
+	</select>
+
+	<select id="selectSearchName" resultType="Employee" parameterType="string">
+	SELECT employee_id employeeId, first_name firstName, last_name lastName, email, phone_number phoneNumber, hire_date hireDate, job_id jobId, salary, commission_PCT commissionPct, manager_id managerId, department_id departmentId
+	FROM employees
+	WHERE LOWER(first_name) Like #{firstName}
+	ORDER BY 1
+	</select>
+	
+</mapper>
