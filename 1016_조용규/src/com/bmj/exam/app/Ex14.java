@@ -1,9 +1,12 @@
 package com.bmj.exam.app;
 
 import java.sql.Date;
+import java.util.List;
 import java.util.Scanner;
 
+import com.bmj.exam.dao.GenresDao;
 import com.bmj.exam.dao.MoviesDao;
+import com.bmj.exam.vo.Genre;
 
 public class Ex14 {
 
@@ -16,7 +19,10 @@ public class Ex14 {
 		
 		while(true) {
 			try {
-				System.out.println("1) SF / 2) 드라마 / 3) 애니메이션 / 4) 액션 / 5) 로맨스/멜로 6) 판타지 / 7) 가족 / 8) 뮤지컬 / 9) 스릴러");
+				List<Genre> genres = GenresDao.selectList();
+				for (Genre genre2 : genres) {
+					System.out.print(genre2.getNo()+") "+genre2.getName()+" ");
+				}
 				String genreStr = scan.nextLine();
 				genre = Integer.parseInt(genreStr);
 				

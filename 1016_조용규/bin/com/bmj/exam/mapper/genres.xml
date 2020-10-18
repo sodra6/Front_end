@@ -23,7 +23,7 @@ PUBLIC	"-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectList" resultType="Genre">
 	SELECT no, name
 	FROM genres
-	ORDER BY 2
+	ORDER BY 1
 	</select>
 
 </mapper>
